@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://projekt100kol.sk/sitemap.xml
