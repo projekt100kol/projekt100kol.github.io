@@ -14,6 +14,7 @@
   <title>Projekt 100 kôl</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23111014'/%3E%3Cpath d='M10 45 25 19h8L18 45zm18 0 15-26h11L39 45z' fill='%23e83683'/%3E%3C/svg%3E">
   <link rel="preload" as="image" href="karolina-hero.webp" type="image/webp">
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -232,19 +233,53 @@
       <div>
         <p class="eyebrow">Pred spustením</p>
         <h2 id="signup-title">Chcem sledovať cestu</h2>
-        <p>Oznámenie spustenia Donia, mesačné aktualizácie, neskôr ebook a informácie o pripravovaných programoch.</p>
+        <p>Oznámenie spustenia Donia, mesačné aktualizácie a informácie o pokračovaní projektu.</p>
       </div>
-      <form class="signup-form" data-signup-form>
-        <label for="email">E-mail</label>
-        <div class="form-row">
-          <input id="email" name="email" type="email" autocomplete="email" placeholder="vas@email.sk" required>
-          <button class="button button-primary" type="submit">Chcem vedieť o spustení</button>
+      <form
+        class="signup-form"
+        id="sib-form"
+        method="post"
+        action="https://c85175e4.sibforms.com/serve/MUIFAFskd7IdW05O4eOwJEpNyflSn6RM3tNHrfLj7t_KX4C5OggxER9H8UljpHQ9vnYRDGGqBuqcA26RwSddpMLtl-ZpcL02kZ3LCk5xbHyuOjaRaHCLVvz8qyRxF5GcPouOSlLCpvsSDnXT6zV43LtqhiLu8V1xzdJwJZyG3q4NOrhlD3nhknsx8JEL2gen5qwTP_i7J2qXAnQ-xQ=="
+        data-type="subscription"
+      >
+        <div id="error-message" class="sib-form-message-panel form-status form-status-error" role="alert">
+          <div class="sib-form-message-panel__text">
+            <span class="sib-form-message-panel__inner-text">Prihlásenie sa nepodarilo uložiť. Skúste to, prosím, znova.</span>
+          </div>
         </div>
-        <label class="consent">
-          <input type="checkbox" name="consent" required>
-          <span>Súhlasím so spracovaním e-mailu na zasielanie noviniek o Projekte 100 kôl.</span>
-        </label>
-        <p class="form-status" role="status" aria-live="polite"></p>
+        <div id="success-message" class="sib-form-message-panel form-status form-status-success" role="status">
+          <div class="sib-form-message-panel__text">
+            <span class="sib-form-message-panel__inner-text">Ďakujeme. Skontrolujte si e-mail a potvrďte odber kliknutím na odkaz.</span>
+          </div>
+        </div>
+
+        <div class="sib-input sib-form-block">
+          <div class="form__entry entry_block">
+            <label for="EMAIL" data-required="*">E-mail</label>
+            <div class="form-row entry__field">
+              <input class="input" id="EMAIL" name="EMAIL" type="email" autocomplete="email" placeholder="vas@email.sk" data-required="true" required>
+              <button class="button button-primary sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">Chcem sledovať cestu</button>
+            </div>
+            <label class="entry__error entry__error--primary"></label>
+          </div>
+        </div>
+
+        <div class="sib-optin sib-form-block" data-required="true">
+          <div class="form__entry entry_mcq">
+            <div class="form__label-row">
+              <label class="consent" for="OPT_IN">
+                <input class="input_replaced" id="OPT_IN" name="OPT_IN" type="checkbox" value="1" required>
+                <span>Chcem dostávať informácie o spustení kampane Projekt 100 kôl a neskoršie aktualizácie projektu. Súhlas môžem kedykoľvek odvolať. <a href="ochrana-osobnych-udajov.html" data-privacy>Ochrana osobných údajov</a></span>
+              </label>
+            </div>
+            <label class="entry__error entry__error--primary"></label>
+          </div>
+        </div>
+
+        <p class="privacy-note">Na rozosielanie e-mailov používam Brevo. E-mailová adresa bude prenesená Brevu na spracovanie podľa jeho <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener noreferrer">zásad ochrany súkromia</a>.</p>
+
+        <input type="text" name="email_address_check" value="" class="input--hidden" tabindex="-1" aria-hidden="true">
+        <input type="hidden" name="locale" value="sk">
       </form>
     </section>
   </main>
@@ -267,5 +302,18 @@
 
   <script src="site-config.js"></script>
   <script src="script.js"></script>
+  <script>
+    window.REQUIRED_CODE_ERROR_MESSAGE = 'Vyberte predvoľbu krajiny.';
+    window.LOCALE = 'sk';
+    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = 'Zadané údaje nie sú platné. Skontrolujte e-mailovú adresu a skúste to znova.';
+    window.REQUIRED_ERROR_MESSAGE = 'Toto pole nemôže zostať prázdne.';
+    window.GENERIC_INVALID_MESSAGE = 'Zadané údaje nie sú platné. Skontrolujte e-mailovú adresu a skúste to znova.';
+    window.INVALID_NUMBER = 'Zadané číslo nie je platné.';
+    window.INVALID_DATE = 'Zadaný dátum nie je platný.';
+    window.REQUIRED_MULTISELECT_MESSAGE = 'Vyberte aspoň jednu možnosť.';
+    window.translation = { common: {} };
+    var AUTOHIDE = false;
+  </script>
+  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 </body>
 </html>

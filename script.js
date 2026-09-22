@@ -91,15 +91,6 @@ document.querySelectorAll('[data-counter]').forEach((counter) => {
   observer.observe(counter);
 });
 
-const signupForm = document.querySelector('[data-signup-form]');
-if (signupForm) {
-  signupForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const status = signupForm.querySelector('.form-status');
-    status.textContent = 'Formulár pripojíme k odberu pred zverejnením webu.';
-  });
-}
-
 document.querySelectorAll('[data-year]').forEach((node) => {
   node.textContent = String(new Date().getFullYear());
 });

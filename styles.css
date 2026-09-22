@@ -384,13 +384,29 @@ h2 { font-size: clamp(2.2rem, 4.5vw, 5.2rem); }
 }
 .signup h2 { margin-bottom: 20px; }
 .signup > div > p:last-child { max-width: 52ch; color: var(--paper-muted); }
-.signup-form label:first-child { display: block; margin-bottom: 8px; font-size: 0.78rem; font-weight: 900; text-transform: uppercase; }
+.signup-form > .sib-input label:first-child { display: block; margin-bottom: 8px; font-size: 0.78rem; font-weight: 900; text-transform: uppercase; }
 .form-row { display: grid; grid-template-columns: 1fr auto; }
 .form-row input { min-width: 0; min-height: 52px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 0; background: var(--ink-soft); color: var(--paper); }
 .form-row input::placeholder { color: #8f8791; }
 .consent { display: flex; align-items: flex-start; gap: 10px; margin-top: 16px; color: var(--paper-muted); font-size: 0.82rem; }
 .consent input { margin-top: 4px; accent-color: var(--pink); }
-.form-status { min-height: 1.5em; margin: 12px 0 0; color: var(--paper-muted); font-size: 0.86rem; }
+.consent a { color: var(--paper); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.privacy-note { margin: 12px 0 0; color: var(--paper-muted); font-size: 0.76rem; line-height: 1.55; }
+.privacy-note a { color: var(--paper); text-underline-offset: 3px; }
+.form-status { max-width: none; margin: 0 0 16px; border: 1px solid; border-radius: 0; font-size: 0.86rem; }
+.form-status .sib-form-message-panel__text { justify-content: flex-start; padding: 12px 14px; }
+.form-status-error { color: #ffd8df; background: #3f1621; border-color: #8f2949; }
+.form-status-success { color: #dcffe8; background: #123d26; border-color: #267d4a; }
+.signup-form .entry__error { display: block; margin-top: 8px; color: #ff9dba; font-size: 0.82rem; }
+.signup-form .input--hidden { position: absolute; left: -9999px; }
+
+.legal-page { min-height: 100vh; padding: 150px clamp(20px, 7vw, 110px) 90px; background: var(--ink); color: var(--paper); }
+.legal-page article { max-width: 820px; }
+.legal-page h1 { margin-bottom: 36px; }
+.legal-page h2 { margin: 44px 0 12px; font-size: clamp(1.35rem, 2.4vw, 2rem); }
+.legal-page p, .legal-page li { color: var(--paper-muted); line-height: 1.75; }
+.legal-page a { color: var(--paper); text-underline-offset: 4px; }
+.legal-page .legal-updated { margin-top: 48px; font-size: 0.82rem; }
 
 .site-footer {
   display: grid;

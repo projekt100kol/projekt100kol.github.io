@@ -8,5 +8,5 @@ window.PROJEKT100KOL = Object.freeze({
   contactEmail: 'karolina.gregor87@gmail.com',
   partnerPdfUrl: '',
   mediaKitUrl: '',
-  privacyUrl: ''
+  privacyUrl: 'ochrana-osobnych-udajov.html'
 });
