@@ -235,13 +235,8 @@
         <h2 id="signup-title">Chcem sledovať cestu</h2>
         <p>Oznámenie spustenia Donia, mesačné aktualizácie a informácie o pokračovaní projektu.</p>
       </div>
-      <form
-        class="signup-form"
-        id="sib-form"
-        method="post"
-        action="https://c85175e4.sibforms.com/serve/MUIFAFskd7IdW05O4eOwJEpNyflSn6RM3tNHrfLj7t_KX4C5OggxER9H8UljpHQ9vnYRDGGqBuqcA26RwSddpMLtl-ZpcL02kZ3LCk5xbHyuOjaRaHCLVvz8qyRxF5GcPouOSlLCpvsSDnXT6zV43LtqhiLu8V1xzdJwJZyG3q4NOrhlD3nhknsx8JEL2gen5qwTP_i7J2qXAnQ-xQ=="
-        data-type="subscription"
-      >
+      <div class="signup-form-shell sib-form">
+        <div id="sib-form-container" class="sib-form-container">
         <div id="error-message" class="sib-form-message-panel form-status form-status-error" role="alert">
           <div class="sib-form-message-panel__text">
             <span class="sib-form-message-panel__inner-text">Prihlásenie sa nepodarilo uložiť. Skúste to, prosím, znova.</span>
@@ -253,12 +248,26 @@
           </div>
         </div>
 
+        <div id="sib-container" class="sib-container--large sib-container--vertical">
+          <form
+            class="signup-form"
+            id="sib-form"
+            method="post"
+            action="https://c85175e4.sibforms.com/serve/MUIFAFskd7IdW05O4eOwJEpNyflSn6RM3tNHrfLj7t_KX4C5OggxER9H8UljpHQ9vnYRDGGqBuqcA26RwSddpMLtl-ZpcL02kZ3LCk5xbHyuOjaRaHCLVvz8qyRxF5GcPouOSlLCpvsSDnXT6zV43LtqhiLu8V1xzdJwJZyG3q4NOrhlD3nhknsx8JEL2gen5qwTP_i7J2qXAnQ-xQ=="
+            data-type="subscription"
+          >
+
         <div class="sib-input sib-form-block">
           <div class="form__entry entry_block">
             <label for="EMAIL" data-required="*">E-mail</label>
             <div class="form-row entry__field">
               <input class="input" id="EMAIL" name="EMAIL" type="email" autocomplete="email" placeholder="vas@email.sk" data-required="true" required>
-              <button class="button button-primary sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">Chcem sledovať cestu</button>
+              <button class="button button-primary sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+                <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" aria-hidden="true">
+                  <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                </svg>
+                Chcem sledovať cestu
+              </button>
             </div>
             <label class="entry__error entry__error--primary"></label>
           </div>
@@ -279,8 +288,11 @@
         <p class="privacy-note">Na rozosielanie e-mailov používam Brevo. E-mailová adresa bude prenesená Brevu na spracovanie podľa jeho <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener noreferrer">zásad ochrany súkromia</a>.</p>
 
         <input type="text" name="email_address_check" value="" class="input--hidden" tabindex="-1" aria-hidden="true">
-        <input type="hidden" name="locale" value="sk">
-      </form>
+            <input type="hidden" name="locale" value="en">
+          </form>
+        </div>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -304,7 +316,7 @@
   <script src="script.js?v=2"></script>
   <script>
     window.REQUIRED_CODE_ERROR_MESSAGE = 'Vyberte predvoľbu krajiny.';
-    window.LOCALE = 'sk';
+    window.LOCALE = 'en';
     window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = 'Zadané údaje nie sú platné. Skontrolujte e-mailovú adresu a skúste to znova.';
     window.REQUIRED_ERROR_MESSAGE = 'Toto pole nemôže zostať prázdne.';
     window.GENERIC_INVALID_MESSAGE = 'Zadané údaje nie sú platné. Skontrolujte e-mailovú adresu a skúste to znova.';

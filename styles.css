@@ -384,6 +384,9 @@ h2 { font-size: clamp(2.2rem, 4.5vw, 5.2rem); }
 }
 .signup h2 { margin-bottom: 20px; }
 .signup > div > p:last-child { max-width: 52ch; color: var(--paper-muted); }
+.signup-form-shell, .signup-form-shell .sib-form-container { padding: 0; background: transparent; }
+.signup-form-shell #sib-container { max-width: none; padding: 0; border: 0; background: transparent; }
+.signup-form-shell .sib-form-message-panel { max-width: none; }
 .signup-form > .sib-input label:first-child { display: block; margin-bottom: 8px; font-size: 0.78rem; font-weight: 900; text-transform: uppercase; }
 .form-row { display: grid; grid-template-columns: 1fr auto; }
 .form-row input { min-width: 0; min-height: 52px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 0; background: var(--ink-soft); color: var(--paper); }
