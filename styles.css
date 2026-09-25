@@ -239,7 +239,7 @@ h2 { font-size: clamp(2.2rem, 4.5vw, 5.2rem); }
   background: linear-gradient(90deg, rgba(17, 16, 20, 0.2), transparent 35%), linear-gradient(0deg, rgba(17, 16, 20, 0.35), transparent 35%);
   pointer-events: none;
 }
-.hero-visual img { width: 100%; height: 100%; object-fit: cover; object-position: 48% center; }
+.hero-visual img { width: 100%; height: 100%; object-fit: cover; object-position: 58% center; }
 .hero-visual figcaption {
   position: absolute;
   z-index: 2;
@@ -482,7 +482,7 @@ h2 { font-size: clamp(2.2rem, 4.5vw, 5.2rem); }
   .stat { display: grid; grid-template-columns: 90px 1fr; align-items: center; }
   .stat dd { margin: 0; }
   .hero-visual { min-height: 480px; }
-  .hero-visual img { object-position: 43% center; }
+  .hero-visual img { object-position: 70% center; }
   .section, .journey, .program, .funding, .rewards, .experiment, .companies, .legacy { grid-template-columns: 1fr; padding: 78px 20px; }
   .section-index { grid-column: 1; }
   .section-heading, .section-body, .timeline, .program-grid, .funding-total, .funding-track, .funding-note, .funding > .button, .reward-list, .section-note, .experiment-copy, .companies-copy, .legacy-copy { grid-column: 1; }
