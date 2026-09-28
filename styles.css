@@ -322,13 +322,20 @@ h2 { font-size: clamp(2.2rem, 4.5vw, 5.2rem); }
 .timeline-current { color: white; }
 .timeline-current .timeline-number { background: var(--pink); border-color: var(--pink); color: white; }
 
-/* Desktop: chronological axis runs from right to left, with alternating labels. */
+/* Desktop: chronological axis runs from left to right, with alternating labels. */
 @media (min-width: 981px) {
+  #casova-os .section-heading {
+    grid-column: 2 / 4;
+  }
+  #casova-os .section-heading h2 {
+    max-width: none;
+    white-space: nowrap;
+  }
   #casova-os .timeline {
     grid-column: 2 / 4;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    direction: rtl;
+    direction: ltr;
     height: 320px;
     margin-top: 40px;
   }
