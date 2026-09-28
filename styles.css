@@ -474,6 +474,12 @@ h2 { font-size: clamp(2.2rem, 4.5vw, 5.2rem); }
 .text-link { color: var(--paper); font-weight: 800; text-underline-offset: 5px; }
 
 .legacy { grid-template-columns: 90px 0.78fr 1.22fr; }
+.rev-note {
+  margin: 30px 0 0;
+  color: var(--paper-muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
 
 .final-cta {
   display: grid;
