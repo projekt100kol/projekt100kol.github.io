@@ -907,7 +907,15 @@ h2 { font-size: clamp(2.2rem, 4.5vw, 5.2rem); }
 .race-story .race-photo img { object-position: 50% 40%; }
 .race-story:nth-child(2) .race-photo img { object-position: 56% 48%; }
 .race-story:nth-child(3) .race-photo img { object-position: 50% 34%; }
-.race-story:nth-child(4) .race-photo img { object-position: 50% 38%; }
+.race-story:nth-child(4) .race-photo img {
+  object-position: 50% 38%;
+  filter: saturate(0.72) contrast(1.1) brightness(0.96) sepia(0.08);
+}
+.race-story:nth-child(4) .race-photo::after {
+  background:
+    linear-gradient(180deg, rgba(31, 24, 18, 0.03) 45%, rgba(17, 16, 20, 0.22) 100%),
+    linear-gradient(90deg, rgba(39, 25, 28, 0.08), rgba(230, 190, 150, 0.04));
+}
 .race-story p {
   max-width: 52ch;
   margin: 0;
