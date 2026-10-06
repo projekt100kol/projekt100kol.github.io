@@ -36,8 +36,14 @@ const setExternalLink = (selector, url) => {
 
 setExternalLink('[data-instagram]', siteConfig.instagramUrl);
 setExternalLink('[data-partner-pdf]', siteConfig.partnerPdfUrl);
-setExternalLink('[data-media-kit]', siteConfig.mediaKitUrl);
-setExternalLink('[data-privacy]', siteConfig.privacyUrl);
+
+if (siteConfig.privacyUrl) {
+  document.querySelectorAll('[data-privacy]').forEach((link) => {
+    link.href = siteConfig.privacyUrl;
+    link.removeAttribute('target');
+    link.removeAttribute('rel');
+  });
+}
 
 if (siteConfig.contactEmail) {
   const emailUrl = `mailto:${siteConfig.contactEmail}`;

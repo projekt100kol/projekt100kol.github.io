@@ -7,6 +7,5 @@ window.PROJEKT100KOL = Object.freeze({
   instagramUrl: 'https://instagram.com/gregor_karolina/',
   contactEmail: 'karolina.gregor87@gmail.com',
   partnerPdfUrl: '',
-  mediaKitUrl: '',
   privacyUrl: 'ochrana-osobnych-udajov.html'
 });
