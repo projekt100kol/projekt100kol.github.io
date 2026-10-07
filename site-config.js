@@ -6,6 +6,6 @@ window.PROJEKT100KOL = Object.freeze({
   licenseYears: '≈ 1',
   instagramUrl: 'https://instagram.com/gregor_karolina/',
   contactEmail: 'karolina.gregor87@gmail.com',
-  partnerPdfUrl: 'media/partnerske-materialy-projekt-100-kol.pdf',
+  partnerPdfUrl: 'media/partnerske-materialy-projekt-100-kol.pdf?v=8',
   privacyUrl: 'ochrana-osobnych-udajov.html'
 });
