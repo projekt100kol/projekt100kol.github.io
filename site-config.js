@@ -1,6 +1,6 @@
 window.PROJEKT100KOL = Object.freeze({
-  campaignLive: false,
-  donioUrl: '',
+  campaignLive: true,
+  donioUrl: 'https://donio.sk/podporte-projekt-100-kol',
   starts: 10,
   podiums: 1,
   licenseYears: '≈ 1',
