@@ -1,7 +1,7 @@
 window.PROJEKT100KOL = Object.freeze({
   campaignLive: true,
   donioUrl: 'https://donio.sk/podporte-projekt-100-kol',
-  starts: 10,
+  starts: 14,
   podiums: 1,
   licenseYears: '≈ 1',
   instagramUrl: 'https://instagram.com/gregor_karolina/',
