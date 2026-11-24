@@ -1109,3 +1109,144 @@ h2 { font-size: clamp(2.2rem, 4.5vw, 5.2rem); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+
+/* Partnership formats */
+.partnership-content {
+  grid-column: 5 / -1;
+}
+
+.partnership-intro {
+  max-width: 58rem;
+  margin: 0 0 2rem;
+  font-size: clamp(1.2rem, 1.7vw, 1.6rem);
+  line-height: 1.55;
+  color: var(--paper);
+}
+
+.partnership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.partnership-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(1.4rem, 2.4vw, 2.2rem);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.012);
+}
+
+.partnership-card-featured {
+  background: linear-gradient(180deg, rgba(232, 54, 131, 0.12), rgba(232, 54, 131, 0.025));
+  box-shadow: inset 0 3px 0 var(--pink);
+}
+
+.package-kicker {
+  margin: 0 0 0.85rem;
+  color: var(--pink);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.partnership-card h3 {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.1vw, 2rem);
+  line-height: 1.02;
+}
+
+.package-fit {
+  min-height: 8.1rem;
+  margin: 1rem 0 1.4rem;
+  color: var(--paper-muted);
+  line-height: 1.55;
+}
+
+.partnership-card ul {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.partnership-card li {
+  position: relative;
+  padding-left: 1.25rem;
+  line-height: 1.45;
+}
+
+.partnership-card li::before {
+  content: "";
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 0.42rem;
+  height: 0.42rem;
+  background: var(--pink);
+}
+
+.partnership-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.partnership-note p {
+  max-width: 47rem;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.partnership-note .button {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 1100px) {
+  .partnership-content {
+    grid-column: 4 / -1;
+  }
+
+  .partnership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .package-fit {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .partnership-content {
+    grid-column: 1 / -1;
+  }
+
+  .partnership-intro {
+    font-size: 1.1rem;
+  }
+
+  .partnership-card {
+    padding: 1.4rem;
+  }
+
+  .partnership-note {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .partnership-note .button {
+    width: 100%;
+  }
+}
