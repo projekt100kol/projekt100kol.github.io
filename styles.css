@@ -373,6 +373,45 @@ h2 { font-size: clamp(2.2rem, 4.5vw, 5.2rem); }
   line-height: 1.45;
 }
 
+.sponsor-benefits .section-heading h2 { max-width: 9ch; }
+.sponsor-benefits-content { max-width: 840px; }
+.benefits-intro {
+  max-width: 62ch;
+  margin-bottom: 34px;
+  color: var(--paper-muted);
+  font-size: clamp(1.08rem, 1.5vw, 1.3rem);
+  line-height: 1.68;
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.benefits-grid article {
+  min-height: 230px;
+  padding: clamp(24px, 3.2vw, 38px);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.benefits-grid h3 {
+  max-width: 17ch;
+  margin: 0 0 18px;
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 1.75vw, 1.55rem);
+  line-height: 1.08;
+}
+.benefits-grid p {
+  margin: 0;
+  color: var(--paper-muted);
+  line-height: 1.65;
+}
+.sponsor-benefits-content .statement {
+  margin-bottom: 30px;
+  font-size: clamp(1.12rem, 1.65vw, 1.42rem);
+  line-height: 1.45;
+}
+
 .journey { grid-template-columns: 90px 0.55fr 1.45fr; }
 .timeline {
   position: relative;
@@ -697,7 +736,7 @@ h2 { font-size: clamp(2.2rem, 4.5vw, 5.2rem); }
   .hero-visual { min-height: 66vh; }
   .section, .journey, .program, .funding, .rewards, .experiment, .companies, .legacy { grid-template-columns: 54px minmax(0, 1fr); gap: 28px; }
   .section-heading { grid-column: 2; }
-  .section-body, .timeline, .program-grid, .funding-total, .funding-track, .funding-note, .funding > .button, .reward-list, .section-note, .experiment-copy, .companies-copy, .legacy-copy, .partner-value-content, .audience-content { grid-column: 2; }
+  .section-body, .timeline, .program-grid, .funding-total, .funding-track, .funding-note, .funding > .button, .reward-list, .section-note, .experiment-copy, .companies-copy, .legacy-copy, .partner-value-content, .audience-content, .sponsor-benefits-content { grid-column: 2; }
   .funding-track { margin-top: 40px; }
   .signup { grid-template-columns: 1fr; }
   .site-footer { grid-template-columns: 1fr; justify-items: start; }
@@ -725,11 +764,13 @@ h2 { font-size: clamp(2.2rem, 4.5vw, 5.2rem); }
   .hero-visual img { object-position: 84% center; }
   .section, .journey, .program, .funding, .rewards, .experiment, .companies, .legacy { grid-template-columns: 1fr; padding: 78px 20px; }
   .section-index { grid-column: 1; }
-  .section-heading, .section-body, .timeline, .program-grid, .funding-total, .funding-track, .funding-note, .funding > .button, .reward-list, .section-note, .experiment-copy, .companies-copy, .legacy-copy, .partner-value-content, .audience-content { grid-column: 1; }
+  .section-heading, .section-body, .timeline, .program-grid, .funding-total, .funding-track, .funding-note, .funding > .button, .reward-list, .section-note, .experiment-copy, .companies-copy, .legacy-copy, .partner-value-content, .audience-content, .sponsor-benefits-content { grid-column: 1; }
   .section-heading h2 { max-width: 11ch; }
   .partner-value-list article { grid-template-columns: 1fr; gap: 12px; padding: 26px 0; }
   .audience-grid { grid-template-columns: 1fr; }
   .audience-grid article { min-height: 0; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .benefits-grid article { min-height: 0; }
   .program-grid { grid-template-columns: 1fr; }
   .program-grid article, .program-grid article:nth-child(even), .program-grid article:last-child { grid-column: 1; border-right: 0; border-bottom: 1px solid var(--line); }
   .program-grid article:last-child { border-bottom: 0; }
