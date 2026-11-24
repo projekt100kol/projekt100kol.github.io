@@ -72,6 +72,17 @@ if (navToggle && nav) {
   });
 }
 
+const mobileStickyCta = document.querySelector('.mobile-sticky-cta');
+const heroActions = document.querySelector('.hero-actions');
+
+if (mobileStickyCta && heroActions) {
+  const stickyCtaObserver = new IntersectionObserver(([entry]) => {
+    mobileStickyCta.classList.toggle('is-visible', !entry.isIntersecting);
+  }, { threshold: 0.1 });
+
+  stickyCtaObserver.observe(heroActions);
+}
+
 document.querySelectorAll('[data-counter]').forEach((counter) => {
   const target = Number(counter.dataset.counter);
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
