@@ -47,7 +47,15 @@ if (siteConfig.privacyUrl) {
 
 if (siteConfig.contactEmail) {
   const emailUrl = `mailto:${siteConfig.contactEmail}`;
-  document.querySelectorAll('[data-contact-link], [data-email]').forEach((link) => {
+  const contactUrl = siteConfig.contactSubject
+    ? `${emailUrl}?subject=${encodeURIComponent(siteConfig.contactSubject)}`
+    : emailUrl;
+
+  document.querySelectorAll('[data-contact-link]').forEach((link) => {
+    link.href = contactUrl;
+  });
+
+  document.querySelectorAll('[data-email]').forEach((link) => {
     link.href = emailUrl;
   });
 }
